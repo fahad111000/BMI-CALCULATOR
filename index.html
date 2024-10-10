@@ -28,20 +28,21 @@
                 <!-- Col-1 -->
                 <div class="col-1">
                     <!-- Form Rows -->
-                    <div class="form-row">
-                        <label for="#">Height</label>
+                    <div class="form-row " id="heightLabel">
+                        <label for="#">Height (Meter)</label>
                         <input type="text" id="height">
                     </div>
 
                     <!-- Form Rows -->
-                    <div class="form-row">
-                        <label for="#">Weight</label>
+                    <div class="form-row" id="weightLabel">
+                        <label for="#">Weight (Kg)</label>
                         <input type="text" id="weight">
                     </div>
 
 
-                    <div class="form-row">
+                    <div class="form-row buttons">
                         <button class="btn" onclick="clicked();">Calculate</button>
+                        <button class="btn" onclick="restart();">reset</button>
                     </div>
 
                 </div>
@@ -49,7 +50,7 @@
                 <hr>
 
                 <!-- Col-2 -->
-                <div class="col-2">
+                <div class="col-2 " id="tableBlock">
                     <div class="result">
                         <h1>Result </h1>
                         <table>
@@ -64,10 +65,10 @@
 
                             <tbody>
                                 <tr>
-                                    <td>1.76m</td>
-                                    <td>72kg</td>
-                                    <td>22.34</td>
-                                    <td>Healty</td>
+                                    <td id="tableHeight"></td>
+                                    <td id="tableWeight"></td>
+                                    <td id="tableBmi"></td>
+                                    <td id="tableStatus"></td>
                                 </tr>
                             </tbody>
                         </table>

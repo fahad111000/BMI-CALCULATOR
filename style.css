@@ -41,13 +41,15 @@ main {
     display: flex;
 }
 
-/* .form .main-row .col-1 {
-    border: 2px solid orange;
-} */
+hr {
+    display: none;
+}
+
+
 
 .form .main-row .col-2 {
-    /* border: 2px solid black; */
     flex-grow: 1;
+    display: none;
 }
 
 .form .main-row .col-2 h1 {
@@ -120,8 +122,9 @@ th {
 
 .form .btn {
     padding: 12px 5px;
-    width: 37%;
     border: none;
+    width: 50%;
+    display: inline-block;
     border-radius: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
