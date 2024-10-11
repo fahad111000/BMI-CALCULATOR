@@ -89,7 +89,7 @@
 
     .form {
         width: 90%;
-        height: 130%;
+        height: 100vh;
     }
 
     .form .form-row input {
@@ -112,6 +112,7 @@
 
     .form {
         width: 90%;
+        height: 100vh;
     }
 
 
