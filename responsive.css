@@ -18,9 +18,12 @@
 
     .form {
         width: 50%;
+        height: 500px;
     }
 
-
+    table {
+        width: 100%;
+    }
 
     .form .form-row input {
         width: 20%;
@@ -38,19 +41,25 @@
 
 
 /* Tablet Device */
-@media (768px <=width <=1020px) {
+@media (768px <=width <=1024px) {
 
     main {
         border: none;
     }
 
+    .form .main-row {
+        display: flex;
+        flex-direction: column;
+    }
+
 
     .form {
         width: 50%;
+        height: 500px;
     }
 
     .form .form-row input {
-        width: 20%;
+        width: 30%;
         font-size: 20px;
     }
 
@@ -59,7 +68,12 @@
     }
 
     .form .btn {
-        width: 25%;
+        width: 35%;
+    }
+
+
+    table {
+        width: 100%;
     }
 }
 
@@ -89,7 +103,7 @@
 
     .form {
         width: 90%;
-        height: 100vh;
+        height: 500px;
     }
 
     .form .form-row input {
@@ -97,7 +111,7 @@
     }
 
     .form .btn {
-        width: 35%;
+        width: 30%;
     }
 }
 
@@ -112,7 +126,7 @@
 
     .form {
         width: 90%;
-        height: 100vh;
+        height: 500px;
     }
 
 
@@ -126,6 +140,35 @@
     }
 
     .form .btn {
-        width: 35%;
+        width: 45%;
+    }
+}
+
+/* Mobile Device */
+@media (200px <=width <=320px) {
+
+    .form .main-row {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid red; */
+    }
+
+    .form {
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    table {
+        width: 100%;
+    }
+
+
+    .form .form-row input {
+        width: 90%;
+    }
+
+    .form .btn {
+        width: 95%;
     }
 }
