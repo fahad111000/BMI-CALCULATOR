@@ -114,6 +114,12 @@ th {
     color: #353434f5;
     font-size: 20px;
 }
+.form .form-row span {
+    font-size: 12px;
+    font-weight: 100;
+    color: red;
+    display: none;
+}
 
 .form .form-row input:focus {
     border: 1px solid var(--secondary-color);

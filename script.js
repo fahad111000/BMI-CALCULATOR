@@ -1,3 +1,10 @@
+// Inputs
+var inputWeight = document.getElementById('weight');
+var inputHeight = document.getElementById('height');
+
+// Error mesages
+var heightSpan = document.getElementById('heightMissing');
+var weightSpan = document.getElementById('weightMissing');
 
 // Table Values
 var tableHeight = document.getElementById('tableHeight');
@@ -8,16 +15,16 @@ var tableBlock = document.getElementById('tableBlock');
 
 
 // Button Event
+
 function clicked() {
-    // Inputs
-    var inputWeight = document.getElementById('weight').value;
-    var inputHeight = document.getElementById('height').value;
+
 
     // BMI Value
-    var BMI = inputWeight / (inputHeight * inputHeight);
+    var BMI = inputWeight.value / (inputHeight.value * inputHeight.value);
     BMI = BMI.toFixed(2);
 
-    if (BMI < 18.5) {
+
+    if (BMI <= 18.5) {
         tableStatus.innerHTML = ` <strong> Underweight </strong>`;
     }
 
@@ -35,15 +42,47 @@ function clicked() {
     }
 
     tableBlock.style.display = 'block';
-    tableHeight.innerText = `${inputHeight}`;
-    tableWeight.innerText = `${inputWeight}`;
+    tableHeight.innerText = `${inputHeight.value}`;
+    tableWeight.innerText = `${inputWeight.value}`;
     tableBmi.innerText = `${BMI}`;
+
+    // Input Field Checking
+    checkingField(inputHeight, inputWeight);
+
+
+}
+
+function checkingField(height, weight) {
+    if (height.value === '' && weight.value === '') {
+        height.style.border = '1px solid red';
+        weight.style.border = '1px solid red';
+        weightSpan.style.display = 'block';
+        heightSpan.style.display = 'block';
+        tableBlock.style.display = 'none';
+
+    }
+
+    else if (height.value) {
+        if (weight.value === '') {
+            weight.style.border = '1px solid red';
+            weightSpan.style.display = 'block';
+            tableBlock.style.display = 'none';
+        }
+    }
+
+    else {
+        height.style.border = '1px solid red';
+        heightSpan.style.display = 'block';
+        tableBlock.style.display = 'none';
+
+
+    }
 
 
 }
 
 function restart() {
     tableBlock.style.display = 'none';
-    inputHeight = '';
-    inputWeight = '';
+    inputHeight.value = '';
+    inputWeight.value = '';
 }
