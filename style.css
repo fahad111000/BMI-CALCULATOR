@@ -121,6 +121,7 @@ th {
     display: none;
 }
 
+
 .form .form-row input:focus {
     border: 1px solid var(--secondary-color);
 }

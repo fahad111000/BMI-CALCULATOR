@@ -1,3 +1,4 @@
+
 // Inputs
 var inputWeight = document.getElementById('weight');
 var inputHeight = document.getElementById('height');
@@ -17,6 +18,10 @@ var tableBlock = document.getElementById('tableBlock');
 // Button Event
 
 function clicked() {
+    inputHeight.style.border = '1px solid var(--secondary-color)';
+    inputWeight.style.border = '1px solid var(--secondary-color)';
+    heightSpan.style.display = 'none';
+    weightSpan.style.display = 'none';
 
 
     // BMI Value
@@ -83,6 +88,10 @@ function checkingField(height, weight) {
 
 function restart() {
     tableBlock.style.display = 'none';
+    heightSpan.style.display = 'none';
+    weightSpan.style.display = 'none';
+    inputHeight.style.border = '1px solid var(--secondary-color)';
+    inputWeight.style.border = '1px solid var(--secondary-color)';
     inputHeight.value = '';
     inputWeight.value = '';
 }
